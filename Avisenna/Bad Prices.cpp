@@ -5,28 +5,39 @@ using namespace std;
 
 int t;
 
-int main() {
+int main()
+{
 
-    scanf("%d",&t);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-    int n,inp,count=0; 
-    
-    priority_queue<int> pq;
+    cin >> t;
 
-    for (int i=0; i<t; i++) {
-        scanf("%d",&n);
-        for (int j=0; j<n; j++) {
-            scanf("%d",&inp);
-            if ((inp>=pq.top()) && (!(pq.empty()))) {
-                pq.pop();
-                pq.push(inp);
-                count++;
-            }
-            else if (pq.empty()) {pq.push(inp); count++;}
+    int n, temp, max, count = 0;
+    for (int i = 0; i < t; i++)
+    {
+        cin >> n;
+        vector<int> v;
+        for (int j = 0; j < n; j++)
+        {
+            cin >> temp;
+            v.push_back(temp);
         }
-        cout << n-count << endl;
-        pq.pop();
-     }
+
+        for (int j = 0; j < n; j++)
+        {
+            for (int k = j; k < n; k++)
+            {
+                if (v[j] > v[k])
+                {
+                    count++;
+                    break;
+                }
+            }
+        }
+        cout << count << endl;
+        count = 0;
+    }
 
     return 0;
 }
