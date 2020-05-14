@@ -1,29 +1,41 @@
 // https://codeforces.com/problemset/problem/1208/A
 #include <bits/stdc++.h>
-// caranya hafid bener
+
 using namespace std;
 
 int t;
-vector<int> finres;
 
-int main() {
+int xorFunc(int a, int b)
+{
+    return a ^ b;
+}
 
-    scanf("%d",&t);
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-    int inp,a,b,n;
-    int res;
-    for (int i=0; i<t; i++) {
-        scanf("%d %d %d",&a,&b,&n);
-        // res = (a)^(b);
-        // cout << res<< endl;
-        finres.push_back(res);
-    }
+    cin >> t;
 
-    int len=finres.size();
-    for (int i=0; i<len; i++) {
-        printf("%d\n",finres[i]);
+    int a, b, n;
+
+    for (int i = 0; i < t; i++)
+    {
+
+        cin >> a >> b >> n;
+
+        if (n % 3 == 0)
+
+            cout << a << endl;
+
+        else if (n % 3 == 1)
+
+            cout << b << endl;
+
+        else
+
+            cout << xorFunc(a, b) << endl;
     }
 
     return 0;
-
 }
