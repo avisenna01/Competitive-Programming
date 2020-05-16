@@ -19,22 +19,6 @@ int isPrime(int n)
 
 int op(int n, int k)
 {
-    // for (int i = 0; i < k; i++)
-    // {
-    //     if (n % 2 == 0)
-    //     {
-    //         n = n + 2;
-    //     }
-    //     else if (isPrime(n))
-    //     {
-    //         n *= 2;
-    //     }
-    //     else // odd number
-    //     {    // find the smallest factor in odd number
-    //     }
-    // }
-    // return n;
-
     if (n % 2 == 0)
     {
         n += 2 * k;
@@ -50,28 +34,6 @@ int op(int n, int k)
 
     return n;
 }
-
-// int lf(int n)
-// {
-//     for (int i = 2; i <= n; i++)
-//     {
-//         if (n % i == 0)
-//             return i;
-//     }
-// }
-
-// int op1(int n, int k)
-// {
-//     for (int i = 0; i < k; i++)
-//     {
-//         if (n >= 1000000)
-//             break;
-
-//         if (n + lf(n) <= 1000000)
-//             n += lf(n);
-//     }
-//     return n;
-// }
 
 int main()
 {
