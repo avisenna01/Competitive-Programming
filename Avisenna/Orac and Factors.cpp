@@ -29,7 +29,7 @@ int op(int n, int k)
     }
     else
     {
-        n = isPrime(n) + 2 * (k - 1);
+        n += isPrime(n) + 2 * (k - 1);
     }
 
     return n;
