@@ -7,19 +7,27 @@ int t;
 
 void op(int n)
 {
+    vector<int> res;
     int ctr = 1;
     int val = n;
     while (n / 10 > 0)
     {
         if (n % 10 != 0)
         {
-            cout << (n % 10) * ctr << " ";
+            res.push_back((n % 10) * ctr);
             val -= (n % 10) * ctr;
         }
         ctr *= 10;
         n /= 10;
     }
-    cout << val;
+    res.push_back(val);
+
+    int len = res.size();
+    cout << len << endl;
+    for (int i = 0; i < len; i++)
+    {
+        cout << res[i] << " ";
+    }
     cout << endl;
 }
 

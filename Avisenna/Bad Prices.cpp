@@ -4,6 +4,7 @@
 using namespace std;
 
 int t;
+stack<int> s;
 
 int main()
 {
@@ -13,30 +14,28 @@ int main()
 
     cin >> t;
 
-    int n, temp, max, count = 0;
+    int n, inp, count = 0;
     for (int i = 0; i < t; i++)
     {
         cin >> n;
-        vector<int> v;
         for (int j = 0; j < n; j++)
         {
-            cin >> temp;
-            v.push_back(temp);
-        }
+            cin >> inp;
 
-        for (int j = 0; j < n; j++)
-        {
-            for (int k = j; k < n; k++)
+            if (s.size() > 0 && s.top() > inp)
             {
-                if (v[j] > v[k])
+                while (!s.empty() && s.top() > inp)
                 {
+                    s.pop();
                     count++;
-                    break;
                 }
             }
+            s.push(inp);
         }
         cout << count << endl;
         count = 0;
+        while (!s.empty())
+            s.pop();
     }
 
     return 0;
