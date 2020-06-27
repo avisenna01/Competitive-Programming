@@ -1,3 +1,5 @@
+// soal pattern/string matching
+
 #include <bits/stdc++.h>
 
 using namespace std;
