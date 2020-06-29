@@ -1,4 +1,4 @@
-// soal pattern/string matching
+// Search Engine
 
 #include <bits/stdc++.h>
 
@@ -6,7 +6,7 @@ using namespace std;
 
 int t;
 vector<string> nv;
-vector<int> res;
+// vector<int> res;
 
 int main(){
 
@@ -18,6 +18,7 @@ int main(){
     int n,q,count,len,found;
 
     for (int i=0; i<t; i++){
+         cout << "Case "<< i+1 << ":"<< endl;
         cin >> n >> q;
         for (int j=0; j<n; j++){
             cin >> ws;
@@ -41,15 +42,16 @@ int main(){
                     count++;
                 }
             }
-            res.push_back(count);
+            // res.push_back(count);
+            cout << count << endl;
         }
-        cout << "Case "<< i+1 << ":"<< endl;
-        len=res.size();
-        for (int j=0; j<len; j++){
-            cout << res[j]<< endl;
-        }
+        // cout << "Case "<< i+1 << ":"<< endl;
+        // len=res.size();
+        // for (int j=0; j<len; j++){
+        //     cout << res[j]<< endl;
+        // }
         nv.clear();
-        res.clear();
+        // res.clear();
 
     }
 
