@@ -4,8 +4,8 @@
 using namespace std;
 
 int t;
-long int x, y, k;
-long int res = 0;
+unsigned long long int x, y, k;
+unsigned long long int res = 0;
 
 int main()
 {
